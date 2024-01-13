@@ -1,0 +1,165 @@
+/*Colors used in the project*/
+:root{
+    --color-1:#F0E9D2;
+    --color-2:rgb(230, 221, 196);
+    --color-3:#678983;
+    --color-4:rgb(24, 29, 49);
+    --color-5:#EB455F;
+    --color-6:rgb(252, 255, 231);
+    --color-7:#BAD7E9;
+    --color-8:rgb(43, 52, 103);
+    --color-9:white;
+    
+}
+
+/*Style the entire page*/
+html{
+    background-color:var(--color-9);
+    font-size:25px;
+    font-family: Arial, Helvetica, sans-serif;
+    height:100vh;
+}
+
+/*Style the section where the content is present*/
+main{
+    margin:auto;
+    width:50%;
+    padding-top:150px;
+    padding-bottom:50px;
+    text-align:center;
+}
+
+/*Style Logo at the top of the page*/
+.img-logo{
+    height:30px;
+    width:35%;
+}
+
+/*Style both checker box and definition box simultaneously*/
+.div{
+    margin:auto;
+    width:90%;
+    border-radius: 15px;
+}
+
+/*Style checker box only*/
+.div-checker{
+    background-color:var(--color-8);
+    color:var(--color-9);
+    font-size:0.8rem;
+    padding:10px 0px 30px 0px;
+}
+
+/*Style text box inside the checker box*/
+.text-box{
+    background-color: var(--color-8);
+    border-style:none;
+    border-bottom:2px solid var(--color-5);
+    width:60%;
+    height:30px;
+    color:var(--color-9);
+    text-align: center;
+    font-size:1rem;
+}
+
+/*Style check button inside the checker box*/
+.check-button{
+    border-radius:15px;
+    width:25%;
+    height:30px;
+    background-color: var(--color-5);
+    border-style:none;
+    color:var(--color-9);
+    font-size:0.7rem;
+    
+}
+
+/*Style definition box only*/
+.div-definition{
+    display:flex;
+    margin-top: 25px;
+    border:2px solid var(--color-3);
+    padding-bottom:20px;
+}
+
+/*Style Bulb image inside definition box*/
+.img-definition{
+    height:40px;
+    width:10%;
+    padding: 30px 0px 0px 20px;
+}
+
+/*This class will be added while displaying the result inside checker box.Check JavaScript Code line 70-85*/
+.modifyResult{
+    padding-top:20px;
+    font-weight:bold;
+    font-size: 1.2rem;
+    color:var(--color-6);
+}
+
+
+/* 
+Make the app responsive to different scree sizes
+
+NOTE: 1- Only the features that we want to change according to screen size are added here 
+         the rest remain unchanged as already provided above.
+
+      2- The background color is not changed, hence it is commented out. 
+      However, it is a good way to observe the changes based on the screen size.
+*/
+
+/*1. For Mobile Devices*/
+
+@media (min-width: 319px) and (max-width: 480px){
+
+    html{
+        background-color:var(--color-9);
+        /*background-color: lightsalmon; */
+    }
+
+    main{
+        width:100%;   /* Make the content occupy the entire 100% screen width*/ 
+        height:100vh;   /* Make the content occupy the 100% of the screen height*/
+    }
+}
+
+/*2. For Ipads and Tablets*/
+@media (min-width:481px) and (max-width:1200px){
+    
+    html{
+        /*background-color:powderblue; */
+        font-size:1.75rem;
+    }
+
+    main{
+        width:75%; /* Make the content occupy the 75% of the screen width*/ 
+        height:100vh;   /* Make the content occupy the 100% of the screen height*/
+    }
+}
+
+/*3. For Laptops*/
+@media (min-width:1201px) and (max-width:1600px){
+
+    html{
+        /*background-color:limegreen; */
+        font-size:2.1rem;
+    }
+
+    main{
+        width:50%; /* Make the content occupy the 75% of the screen width*/ 
+        height:100vh;   /* Make the content occupy the 100% of the screen height*/
+    }
+}
+
+/*4. For Desktops*/
+@media (min-width:1601px){
+    html{
+        /*background-color:seagreen; */
+        font-size:2.2rem;
+    }
+
+    main{
+        width:50%; /* Make the content occupy the 75% of the screen width*/ 
+        height:100vh;   /* Make the content occupy the 100% of the screen height*/
+    }
+}
